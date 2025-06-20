@@ -13,7 +13,7 @@ function Movies() {
     const fetchMovies = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get('http://localhost:9090/api/movie/fetch');
+            const response = await axios.get('https://smoothly-valued-grubworm.ngrok-free.app /api/movie/fetch');
             setMovies(response?.data)
             setOriginalMovies(response?.data);
         } catch(error) {

@@ -18,7 +18,7 @@ function AddMovie() {
     if (name.current.value.trim() && name.current.value.trim().length >= 2 && category.current.value) {
       try {
         setIsLoading(true);
-        await axios.post('http://localhost:9090/api/movie/create', {
+        await axios.post('https://smoothly-valued-grubworm.ngrok-free.app/api/movie/create', {
           "name": name.current.value?.trim(),
           "category": category.current.value,
           "description": description.current.value?.trim(),

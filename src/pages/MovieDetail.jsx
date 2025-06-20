@@ -16,7 +16,7 @@ function MovieDetail() {
         if (value && value.length>=2) {
             setIsLoading(true);
             try {
-                const response = await axios.post('http://localhost:9090/api/review/create', {
+                const response = await axios.post('https://smoothly-valued-grubworm.ngrok-free.app/api/review/create', {
                     "review": value,
                     "movie": {
                         "id": state?.id
@@ -36,7 +36,7 @@ function MovieDetail() {
     const fetchMovie = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get('http://localhost:9090/api/movie/fetch/'+state?.id);
+            const response = await axios.get('https://smoothly-valued-grubworm.ngrok-free.app/api/movie/fetch/'+state?.id);
             setReviews(response.data?.reviews || []);
         } catch(error) {
             alert("Something went wrong!");
